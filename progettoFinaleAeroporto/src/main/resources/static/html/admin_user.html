@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenota</title>
+    <link rel="stylesheet" href="../css/prenota-style.css">
+    <script src="../js/search_script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-wrapper" >
+                <div class="logo-svg">
+                    <svg id="Livello_1" xmlns="http://www.w3.org/2000/svg" viewBox="125 250 320 320">
+                        <defs>
+                            <linearGradient id="Sfumatura_senza_nome_103" x1="183.98" y1="400.86" x2="438.23"
+                                y2="400.86" gradientUnits="userSpaceOnUse">
+                                <stop offset=".09" stop-color="#a9c0db" />
+                                <stop offset=".19" stop-color="#a3bbd8" />
+                                <stop offset=".32" stop-color="#94b0cf" />
+                                <stop offset=".46" stop-color="#7b9dc1" />
+                                <stop offset=".61" stop-color="#5882ae" />
+                                <stop offset=".76" stop-color="#2c6095" />
+                                <stop offset=".83" stop-color="#164f89" />
+                            </linearGradient>
+                            <linearGradient id="Sfumatura_senza_nome_96" x1="135.44" y1="479.31" x2="399.79" y2="479.31"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset=".43" stop-color="#fff" />
+                                <stop offset=".56" stop-color="#f9f9f9" />
+                                <stop offset=".72" stop-color="#eaeaea" />
+                                <stop offset=".83" stop-color="#dcdcdc" />
+                            </linearGradient>
+                            <linearGradient id="strokeGradient" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#6ea6e6" />
+                                <stop offset="100%" stop-color="#dcdcdc" />
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#Sfumatura_senza_nome_103)" stroke="url(#strokeGradient)" stroke-width="2"
+                            stroke-miterlimit="10"
+                            d="M421.2,275.41c.65-2.28-50.9-19.9-112.45-14.65-24.34,2.08-61.63,4.99-90.49,26.57-22.63,16.92-44.78,48.76-28.91,70.71,14.66,20.28,59.48,28.93,94.78,35.73.65.13,1.19.23,1.58.3,0,0,0,0,0,0,1.05.21,28.36,6.08,34.33,7.46,3.54.82,25.4,5.86,41.35,14.23,4.15,2.18,34.82,18.99,38.4,47.36.51,4.05.31,7.07.12,9.73-1.55,21.6-14.5,36.48-22.3,45.43,0,0-14.31,16.48-28.38,22.49-.11.05-2.59,1.09-2.52,1.17,0,0,0,0,.01,0,.15.01,32.43-11.89,55.96-34.86,29.24-28.53,52.81-78.95,18.71-115.99-40.94-44.46-139.01-34.06-146.2-60.3-5.5-20.04,50.04-52.1,102.68-56.41,24.55-2.01,42.92,2.46,43.34,1.03Z" />
+                        <path fill="url(#Sfumatura_senza_nome_96)" stroke="url(#strokeGradient)" stroke-width="2"
+                            stroke-miterlimit="10"
+                            d="M296.59,396.36c-.55.71,48.19,12.25,62.63,42.77,6.79,14.34,3.36,27.29,2.13,31.22-14.03,44.93-101.41,64.67-132.81,71.77-27.97,6.32-64.46,8.13-71.86,8.13h0c-5.27.02-9.46-.04-12.68-.11-2.51-.06-4.6-.09-6.09-.11-1.65-.02-2.48-.04-2.48-.04-.11.44,71.87,19.35,144.72,9.48,29.12-3.94,51.81-11.59,66.57-17.53,44.81-23.88,63.35-62.93,47.49-94.58-21.65-43.2-96.96-51.84-97.62-51Z" />
+                    </svg>
+                </div>
+                <div class="logo-text">kyFinders</div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="login-btn" onclick="logOut(event)"id="logout">
+                <span class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path
+                            d="M8,0a8,8,0,1,0,8,8A8,8,0,0,0,8,0ZM8,15a7,7,0,0,1-5.19-2.32,2.71,2.71,0,0,1,1.7-1,13.11,13.11,0,0,0,1.29-.28,2.32,2.32,0,0,0,.94-.34,1.17,1.17,0,0,0-.27-.7h0A3.61,3.61,0,0,1,5.15,7.49,3.18,3.18,0,0,1,8,4.07a3.18,3.18,0,0,1,2.86,3.42,3.6,3.6,0,0,1-1.32,2.88h0a1.13,1.13,0,0,0-.27.69,2.68,2.68,0,0,0,.93.31,10.81,10.81,0,0,0,1.28.23,2.63,2.63,0,0,1,1.78,1A7,7,0,0,1,8,15Z"
+                            fill="white" />
+                    </svg>
+                </span>
+                Logout
+            </button>
+        </div>
+    </header>
+
+    <div class="form-wrapper">
+        <div class="form-user">
+            <div class="wrapper">
+                <button id="cerca-partenza-destinazione" onclick="toggleSezione('tendina-partenza-destinazione'); scrollDown('tendina-partenza-destinazione')">
+                    Aeroporto di Partenza e Destinazione
+                </button>
+                <button id="cerca-compagnia" onclick="toggleSezione('tendina-compagnia'); scrollDown('tendina-compagnia')">
+                    Ricerca da una certa compagnia
+                </button>
+                <button id="cerca-partenza-data" onclick="toggleSezione('tendina-orario');scrollDown('tendina-orario')">
+                    Ricerca da una data di partenza
+                </button>
+                <button id="cerca-prenotazioni" onclick="toggleSezione('risultati-voli-prenotati');mostraPrenotazioni(event);scrollDown('risultati-voli-prenotati')">
+                    Mostra/Cancella Prenotazioni
+                </button>
+            </div>
+        </div>
+        <div class="form-admin" id="roba-per-admin" style="display: none;">
+            <div class="placeholder-perche-css-non-collabora">
+                
+            </div>
+            <pre style="font-size: 25px; margin: 20px; font-family: 'Inter', monospace;">      Admin-Options</pre>
+            <button id="modifica-volo" onclick="toggleSezione('modifica-per-admin');scrollDown('modifica-per-admin')" >Modifica un volo</button>
+            <button id="cancella-volo" onclick="toggleSezione('cancella-per-admin');scrollDown('cancella-per-admin')">Cancella un volo</button>
+            <button id="crea-volo" onclick="toggleSezione('crea-per-admin');scrollDown('crea-per-admin')">Crea un volo</button>
+            <button id="crea-volo" onclick="toggleSezione('risultati-voli');scrollDown('risultati-voli'); mostraTuttiVoli(event)">Mostra tutti i Voli</button>
+        </div>
+    </div>
+    <div class="form-wrapper-admin" style="display: none;" id="crea-per-admin">
+        <label for="tendina-partenza-crea">Aeroporto Partenza:</label>
+        <select name="tendina-partenza-crea" id="tendina-partenza-crea" required></select>
+
+        <label for="tendina-destinazione-crea">Aeroporto Destinazione:</label>
+        <select name="tendina-destinazione-crea" id="tendina-destinazione-crea" required></select>
+
+        <label for="tendina-compagnia-crea">Compagnia:</label>
+        <select name="tendina-compagnia-crea" id="tendina-compagnia-crea" required></select>
+
+        <label for="data-partenza-crea">Data partenza:</label>
+        <input type="date" name="data-partenza-crea" id="data-partenza-crea" required>
+
+        <label for="orario-decollo-crea">Orario decollo:</label>
+        <input type="time" id="orario-decollo-crea" name="orario-decollo-crea" required>
+
+        <label for="orario-atterraggio-crea">Orario atterraggio:</label>
+        <input type="time" id="orario-atterraggio-crea" name="orario-atterraggio-crea" required>
+
+        <label for="posti-disponibili-crea">Posti totali:</label>
+        <input type="number" name="posti-disponibili-crea" id="posti-disponibili-crea" required>
+        <button id="crea-volo-button" onclick="creaVolo(event)">CREA VOLO</button>
+    </div>
+    <div class="form-wrapper-admin" style="display: none;" id="modifica-per-admin">
+        <div id="show-modify" style="display:none;">
+        <label for="tendina-partenza-modifica">Aeroporto Partenza:</label>
+        <select name="tendina-partenza-modifica" id="tendina-partenza-modifica" required></select>
+
+        <label for="tendina-destinazione-modifica">Aeroporto Destinazione:</label>
+        <select name="tendina-destinazione-modifica" id="tendina-destinazione-modifica" required></select>
+
+        <label for="tendina-compagnia-modifica">Compagnia:</label>
+        <select name="tendina-compagnia-modifica" id="tendina-compagnia-modifica" required></select>
+
+        <label for="data-partenza-modifica">Data partenza:</label>
+        <input type="date" name="data-partenza-modifica" id="data-partenza-modifica" required>
+
+        <label for="orario-decollo-modifica">Orario decollo:</label>
+        <input type="time" id="orario-decollo-modifica" name="orario-decollo-modifica" required>
+
+        <label for="orario-atterraggio-modifica">Orario atterraggio:</label>
+        <input type="time" id="orario-atterraggio-modifica" name="orario-atterraggio-modifica" required>
+
+        <label for="posti-totali-modifica">Posti totali:</label>
+        <input type="number" name="posti-totali-modifica" id="posti-totali-modifica" required>
+
+        <label for="posti-disponibili-modifica">Posti Disponibili:</label>
+        <input type="number" name="posti-disponibili-modifica" id="posti-disponibili-modifica" required>
+
+        <button id="invia-id-modifica" onclick="modificaVolo(event)">INVIA</button>
+        </div>
+        <label for="volo-id-input">Inserisci ID volo</label>
+        <input type="number" id="volo-id-input">
+        <button id="invia-id-search" onclick="popolaModifica(event);showModificaVolo(event)">CERCA VOLO</button>
+        
+    </div>
+    <div class="form-wrapper-admin" style="display: none;" id="cancella-per-admin">
+        <label for="volo-id-input-cancella" >Inserisci ID volo</label>
+        <input type="number" id="volo-id-input-cancella">
+        <button id="cancella-volo-button" onclick="cancellaVolo(event)">CANCELLA VOLO</button>
+    </div>
+    <div class="tendina" style="display: none;" id="tendina-partenza-destinazione">
+        <select name="tendina-partenza" id="tendina-partenza"></select>
+        <select name="tendina-arrivo" id="tendina-arrivo"></select>
+        <button onclick="ricercaPartenzaDestinazione(event)">Ricerca Voli</button>
+    </div>
+    <div class="orario" style="display: none;" id="tendina-orario">
+        <label for="data-partenza">Seleziona una data di partenza:</label>
+        <input type="date" id="data-partenza" name="data-partenza">
+        <button onclick="ricercaPerDataPartenza(event)">Ricerca Voli per data</button>
+    </div>
+    <div class="tendina" style="display: none;" id="tendina-compagnia">
+        <select name="tendina-compagnia-search" id="tendina-compagnia-search"> </select>
+        <button onclick="ricercaPerCompagnia(event)">Ricerca Voli per compagnia</button>
+    </div>
+
+    <div class="risultati">
+        <div id="risultati-voli" style="display:none;">
+            <button id="bottone-prenota"onclick="prenota(event)">Prenota</button>
+            </div>
+        <div class="risultati" style="display:none;" id="risultati-voli-prenotati">
+            <div id="risultati-prenotazioni">
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>SkyFinders</h4>
+                <p>Il tuo portale per voli facili, rapidi e convenienti.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Link Utili</h4>
+                <ul>
+                    <li><a href="#">Offerte</a></li>
+                    <li><a href="#">Destinazioni</a></li>
+                    <li><a href="#">Contatti</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contatti</h4>
+                <ul>
+                    <li>Email: support@skyfinders.it</li>
+                    <li>Tel: +39 081 787 3200</li>
+                    <li>Via Vic. S. Maria del Pianto Centro Polifunzionale, Edificio 6</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 SkyFinders. Tutti i diritti riservati.
+        </div>
+    </footer>
+</body>
+
+</html>

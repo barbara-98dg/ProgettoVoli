@@ -1,0 +1,579 @@
+:root {
+  --primary: #164f88;
+  --light-bg: #f5f8fc;
+  --border: #d0d7e2;
+  --text-dark: #1f1f1f;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", "Roboto", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.error-message {
+  color: red;
+}
+
+header {
+  background: #fff;
+  padding: 1.2rem 2rem;
+  border-bottom: 2px solid var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-svg svg {
+  stroke-width: 5px;
+  width: 45px;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.logo-svg svg path {
+  stroke-width: 15px;
+}
+
+.logo-svg:hover path {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  justify-content: flex-start; /* Allinea il bottone a sinistra */
+}
+
+.login-btn:hover {
+  background-color: #103c6c;
+}
+
+/* Rimuovi la transizione per evitare animazioni */
+.login-btn {
+  transition: none;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  
+}
+
+.form-user {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.051), rgba(255, 255, 255, 0.221)), url("../source-images/sfondo.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+
+  /* Filtri carini */
+  filter: brightness(1.05) contrast(1.15) saturate(1.2) hue-rotate(-5deg);
+}
+.placeholder-perche-css-non-collabora{
+  width:100%;
+  height: 25%;
+}
+
+.form-admin {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #0e3b66;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+
+#bottone-prenota {
+  width: 20%;
+  margin-top:20px;
+  margin-left : 10px;
+  border: none;
+  background-color: #1e3a8a;
+  border-radius: 12px;
+  color: white; 
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#bottone-prenota:hover {
+  background-color: #103c6c;
+  transform: scale(1.02);
+}
+
+#bottone-prenota:active {
+  background-color: #0d2f54;
+}
+#cerca-partenza-destinazione, #cerca-partenza-data, #cerca-compagnia{
+  width: 70%;
+  transition: width 0.3s ease-in-out;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #1e3a8a;
+  border-radius: 5px;
+  color: black;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+#cerca-partenza-destinazione:hover, #cerca-partenza-data:hover, #cerca-compagnia:hover{
+  background-color: #dbe2f0;
+}
+
+footer {
+  background-color: #0e3b66;
+  color: #f1f1f1;
+  padding: 2.5rem 1.5rem;
+  margin-top: 3rem;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.footer-section ul {
+  list-style-type: none;
+}
+
+.footer-section ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+#cerca-partenza-destinazione, #cerca-partenza-data, #cerca-compagnia, #cerca-prenotazioni {
+  width: 70%;
+  transition: all 0.3s ease-in-out; 
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #1e3a8a;
+  border-radius: 10px;
+  color: white;
+  background-color:  #164f88;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#cerca-partenza-destinazione:hover, #cerca-partenza-data:hover, #cerca-compagnia:hover, #cerca-prenotazioni:hover {
+  background-color: #193c83;
+  width: 85%; 
+  transform: scale(1.05);
+}
+
+#cerca-partenza-destinazione:focus, #cerca-partenza-data:focus, #cerca-compagnia:focus, #cerca-prenotazioni:focus {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#crea-volo, #cancella-volo, #modifica-volo {
+  background-color: skyblue;
+  width: 95%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px; 
+  font-weight: bold; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px; 
+}
+
+#crea-volo:hover, 
+#cancella-volo:hover, 
+#modifica-volo:hover {
+  background-color: #16bebe;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#crea-volo:active, 
+#cancella-volo:active, 
+#modifica-volo:active {
+  background-color: #0a8d8d;
+}
+.wrapper {
+display: flex;
+margin: 200px;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+height: 100vh;
+background-color: white;
+border-radius: 3%;
+}
+/* Contenitori principali */
+.form-wrapper-admin {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: #ffffff;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Label */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Input e select */
+#tendina-partenza-crea, #tendina-destinazione-crea, #tendina-compagnia-crea,
+#data-partenza-crea, #orario-decollo-crea, #orario-atterraggio-crea, #posti-disponibili-crea,
+#tendina-partenza-modifica, #tendina-destinazione-modifica, #tendina-compagnia-modifica, #tendina-compagnia-search,
+#data-partenza-modifica, #orario-decollo-modifica, #orario-atterraggio-modifica, #posti-totali-modifica,
+#posti-disponibili-modifica,
+#volo-id-input, #volo-id-input-cancella {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+
+#tendina-partenza-crea:focus, #tendina-destinazione-crea:focus, #tendina-compagnia-crea:focus,
+#data-partenza-crea:focus, #orario-decollo-crea:focus, #orario-atterraggio-crea:focus, #posti-disponibili-crea:focus,
+#tendina-partenza-modifica:focus, #tendina-destinazione-modifica:focus, #tendina-compagnia-modifica:focus, #tendina-compagnia-search:focus,
+#data-partenza-modifica:focus, #orario-decollo-modifica:focus, #orario-atterraggio-modifica:focus, #posti-totali-modifica:focus,
+#posti-disponibili-modifica:focus,
+#volo-id-input:focus, #volo-id-input-cancella:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(22, 79, 136, 0.5);
+}
+
+/* Bottoni specifici */
+#crea-volo-button ,#cancella-prenotazione-button{
+  background-color: #164f88;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#crea-volo-button:hover ,#cancella-prenotazione-button {
+  background-color: #103c6c;
+  transform: scale(1.02);
+}
+
+#crea-volo-button:active ,#cancella-prenotazione-button{
+  background-color: #0d2f54;
+}
+
+#invia-id-modifica,#invia-id-search {
+  background-color: #103c6c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#invia-id-modifica:hover,#invia-id-search:hover {
+  background-color:  #103c6c;
+  transform: scale(1.02);
+}
+
+#invia-id-modifica:active {
+  background-color: #1e7e34;
+}
+
+#cancella-volo-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#cancella-volo-button:hover {
+  background-color: #c82333;
+  transform: scale(1.02);
+}
+
+#cancella-volo-button:active {
+  background-color: #bd2130;
+}
+
+/* Tabelle nei risultati */
+#risultati-voli table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+#risultati-voli table th, #risultati-voli table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+#risultati-voli table th {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+#risultati-voli table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#risultati-voli table tr:hover {
+  background-color: #dbe2f0;
+}
+
+/* Nessun risultato */
+#risultati-prenotazioni {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  padding: 20px;
+}
+
+/* Contenitori principali per le tendine */
+.tendina, .orario {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: #ffffff;
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Label */
+.orario label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Select e input */
+#tendina-partenza, #tendina-arrivo, #tendina-compagnia-search, #data-partenza {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+#tendina-partenza:focus, #tendina-arrivo:focus, #tendina-compagnia-search:focus, #data-partenza:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(22, 79, 136, 0.5);
+}
+
+/* Bottoni specifici */
+.tendina button, .orario button {
+  background-color: #164f88;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.tendina button:hover, .orario button:hover {
+  background-color: #103c6c;
+  transform: scale(1.02);
+}
+
+.tendina button:active, .orario button:active {
+  background-color: #0d2f54;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table thead th {
+  background-color: #164f88;
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 2px solid #d0d7e2;
+}
+
+
+table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #d0d7e2;
+  text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #dbe2f0;
+  cursor: pointer;
+}
+
+table tbody td input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+table tbody tr.selected {
+  background-color: #b3d4fc;
+}
+
+table + span {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+}
+
+
+.show {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.hidden {
+  animation: fadeOut 0.5s ease forwards;
+}
